@@ -22,7 +22,6 @@ class Stack:
     def rev(self):
         #Reverse the entire list
         self.list.reverse()
-        #self.list = deque(element[::-1] for element in self.list)
          # Reverse each element in the deque
         reversed_elements = []
         for element in self.list:
@@ -49,9 +48,6 @@ class Stack:
                 check.append(i)
                 print(check)
             elif i in closing:
-                #print(i)
-                #print(check[-1])
-                #print(f"PAir: {pairs[i]}")
                 #if the list is empty or the most recent element is not equal to the correspoonding value (other bracket "}")
                 if not check or check[-1] != pairs[i]:
                     return False
