@@ -38,35 +38,10 @@ class Queuee:
             order = self.dequeue()
             print("Now serving: ",order)
             time.sleep(2)
-        # time.sleep(2.0)
-        # for j in self.queue:
-        #     print(len(j))
-        #     #self.dequeue()
-        #     #print(f"Order {self.queue} has finished.")
-    
-
-
-
-
 
 q = Queuee()
 orders = ['pizza','samosa','pasta','biryani','burger']
 
-
-# q.enqueu(15)
-# q.enqueu(25)
-# q.enqueu(35)
-# q.enqueu(45)
-# q.enqueu(55)
-#print(q.length())
-#print(q.queue)
-
-#q.dequeue()
-#print(q.length())
-
-#print(q.placeOrd(["ham", "Turk", "chick"]))
-
-#print(q.queue)
 
 po = threading.Thread(target=q.placeOrd,args=(orders,))
 go = threading.Thread(target=q.finishOrd)
@@ -76,5 +51,3 @@ go.start()
 
 po.join()
 go.join()
-
-#print(f"PO : {po} , Finished : {go}")
