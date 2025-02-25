@@ -67,40 +67,12 @@ class Hashtable():
     def find_temp(self, date):
         df = pd.read_csv('nyc_weather.csv')
         cvs_date = df[['date','temperature(F)']]
-        #print(cvs_date)
         for index, row in cvs_date.iterrows():
              if row['date'] == date:
-                 #print(row['date'] , row['temperature(F)'])
                  return row['temperature(F)']
         return "Date not found"
 
 
-    # def per_word(self):
-    #     wrd_cnt = {}
-    #     with open("poem.txt", "r")as f:
-    #         #wrd = f.read().split(' ')
-    #         #print(wrd)
-    #         for token in f:
-    #             #print(token)
-    #             for j in token.split():
-    #             #token=token.replace('\n','')
-    #                 print(j)
-    #             #if wrd in token.split():
-    #                 wrd_cnt[token]+=1
-    #             #else:
-    #                 wrd_cnt[token]=1
-    #         return wrd_cnt
-    #     #     for word in wrd:
-    #     #         wrd_cnt.extend(word.split())
-    #     # return wrd_cnt
-                
-                
-
-        # df = pd.read_csv("poem.txt")
-        # txt_wrd = dff
-
-        # for i, j in df.iterrows():
-        #     print(i, j)
     def hey(self):
         wrd_cnt = {}
         with open('poem.txt', 'r') as file:
@@ -144,24 +116,6 @@ class Hashtable():
 
 # Display the DataFrame
         print(df)
-
-
-        # Display the DataFrame
-        #print(df)
-
-
-
-    # def hey_no(self):
-    #     word_count = {}
-    #     with open("poem.txt","r") as f:
-    #         for line in f:
-    #             tokens = line.split(' ')
-    #             for token in tokens:
-    #                 token=token.replace('\n','')
-    #                 if token in word_count:
-    #                     word_count[token]+=1
-    #                 else:
-    #                     word_count[token]=1
 
 
 
